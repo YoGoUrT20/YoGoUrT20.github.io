@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YoGoUrT's web</title>
+</head>
+
+<body>
+
+    <div id="page">
+        <div id="container">
+            <h1>:(</h1>
+            <h2>
+                This Website is not finished yet
+            </h2>
+            <p id="percent" style="font-size: 50px;"> Page is loading...</p>
+            <div id="details">
+                <div id="qr">
+                    <div id="image">
+                        <img src="frame.png" alt="">
+                    </div>
+                </div>
+                <div id="stopcode">
+                    <h4>
+                        For more information scan the qr-code
+                        
+                    </h4>
+                    <h5>
+                        
+                        Code: 503 WEBSITE NOT FINISHED
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script>
+            const element = document.getElementById("percent");
+            element.innerHTML = "Page is loading...";
+
+
+            function writeNumbersWithInterval() {
+                let number = 1;
+                const interval = setInterval(() => {
+                    let randomnum = Math.floor(Math.random() * (18 - 9 + 1)) + 6;
+                    number += randomnum
+                    if (number > 100) {
+                        clearInterval(interval);
+                        element.innerHTML = '100%'
+                        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+
+                    }
+                    if (number < 100) {
+                        element.innerHTML = number + '%';
+                    }
+                }, 2000); // 5000 milliseconds = 5 seconds
+            }
+
+            writeNumbersWithInterval();
+        </script>
+
+
+
+</html>
+</body>
